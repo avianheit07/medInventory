@@ -1,0 +1,52 @@
+.row
+  .column.large-12
+    h1 INVENTORY LOGS
+    hr
+.row
+  table(style="width: 100%")
+    thead
+      tr
+        th Date
+        th Employee Details
+        th Name
+        th Medicine
+        th No. Tablets
+        th Person around
+
+    tbody
+      tr(ng-repeat="log in logs")
+        th 
+          a.icon-info(ng-click="select($index); toggleModal()") {{log.medicine.data | date:'short'}}
+
+        th {{log.meditabId}} - {{log.email}}
+        th {{log.fullName}}
+        th {{log.medicineDetails.brandName}}
+        th {{log.medicine.count}}
+        th {{log.inAttendance.email}}
+
+
+modal(show='detailModal', title='Log Details', class='fixed')
+  .row.company
+    .large-6.columns.left_column
+      .row
+        .column.small-10.small-offset-1.text-left
+          h4 Meditab Id: {{ selected.meditabId }}
+          p 
+          | Full Name: {{ selected.fullName }}
+          br
+          | Email: {{ selected.email }}
+          
+    .large-6.columns.right_column
+      .row
+        .column.small-10.small-offset-1.text-left
+          h4 Brand Name: {{ selected.medicineDetails.brandName }}
+          h6 Generic Name: {{ selected.medicineDetails.genericName }}
+          p Description: {{ selected.medicineDetails.description }}
+          p 
+          | Number of items taken: {{ selected.medicine.count }}
+          br
+          | Number of items remaining at the time: {{ selected.medicine.remainingAtTime }}
+          br
+          | Date: {{ selected.medicine.data }}
+          br
+          | Person Present at the time: {{ selected.inAttendance.email }}

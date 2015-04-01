@@ -1,0 +1,13 @@
+div(layout="column")
+  md-toolbar.md-primary
+    h1.md-toolbar-tools ElixInventory
+
+  md-content.md-padding(layout='column')
+    md-input-container
+      label Email
+      input(ng-model='email', type='email')
+    md-input-container
+      label Password
+      input(ng-model='password', type='password')
+
+    md-button.md-raised.md-primary(ng-click="login()") LOGIN w/ GMAIL

@@ -1,0 +1,36 @@
+doctype html
+html(ng-app="RegistrationApp")
+    head
+        title Public
+        base(href="http://localhost:1337/")
+        meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+
+        // STYLES
+        link(rel="stylesheet", href="/lib/angular-material/angular-material.min.css")
+        link(rel="stylesheet", href="/styles/dependencies/foundation/foundation.css")
+        link(rel="stylesheet", href="/styles/dependencies/foundation/normalize.css")
+        link(rel="stylesheet", href="/styles/admin/app.css")
+        // STYLES END
+    body
+        // TEMPLATES
+        script(type="text/javascript", src="/templates/jst_public.js")
+        // TEMPLATES END
+        ng-view
+        // SCRIPTS
+        script(src="/lib/angular/angular.js")
+        script(src="/lib/angular/angular-animate.js")
+        script(src="/lib/angular/angular-resource.js")
+        script(src="/lib/angular/angular-route.js")
+        script(src="/lib/lodash/lodash.js")
+        script(src="/lib/angular-material/angular-material.min.js")
+        script(src="/lib/angular-material/angular-material.js")
+        script(src="/lib/angular-aria/angular-aria.min.js")
+        script(src="/lib/angular-aria/angular-aria.js")
+        script(src="/lib/angular-messages/angular-messages.min.js")
+        script(src="/lib/angular-messages/angular-messages.js")
+        script(src="/js/public/app.js")
+        script(src="/js/public/login/LoginCtrl.js")
+        script(src="/js/public/medicine/MedCtrl.js")
+        script(src="/js/common/NavigatorCtrl.js")
+        script(src="/js/common/directives/modalDirective/directive.js")
+        // SCRIPTS END

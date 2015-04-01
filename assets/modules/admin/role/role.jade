@@ -1,0 +1,27 @@
+.row
+  .column.large-12
+    h1 ROLE
+    hr
+.row
+  .column.large-10.large-offset-1
+    table(style="width: 100%")
+      thead
+        tr
+          th #
+          th Role Name
+      tbody
+        tr(ng-repeat="r in roles track by $index")
+          td {{ $index + 1}}
+          th {{ r.name }}
+          th 
+            a.icon-info(ng-click="active.toDisplay(med); active.select(med)")
+      tfoot
+        tr
+          th &nbsp
+          th 
+            .row.collapse
+              .small-10.column
+                input(type="text", ng-model="data.new_role")
+              .small-2.column
+                a.button.postfix(ng-click="add()") Add
+          th &nbsp

@@ -1,0 +1,32 @@
+.row
+  .column.large-12
+    h1 SYMPTOMS
+    hr
+.row
+  table(style="width: 100%")
+    thead
+      tr
+        th #
+        th Name
+        th Description
+        th &nbsp
+    tbody
+      tr(ng-repeat="u in symptoms track by $index")
+        td {{ $index + 1 }}
+        td {{ u.name }}
+        th {{ u.description }}
+        th 
+          a(ng-click="") 
+            .icon-edit
+    tfoot
+        tr
+          th &nbsp
+          th
+            input(type="text", ng-model="data.symptom.name")
+          th 
+            .row.collapse
+              .small-10.column
+                input(type="text", ng-model="data.symptom.description")
+              .small-2.column
+                a.button.postfix(ng-click="add()") Add
+          th &nbsp

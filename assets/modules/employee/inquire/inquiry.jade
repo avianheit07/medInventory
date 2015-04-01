@@ -1,0 +1,17 @@
+.row
+  .column.large-12
+    h1 Inquiry Board
+    hr
+
+.row(contenteditable="true")#chatbox
+    {{ test }}
+    //- textarea(rows="10", cols="30", disabled, id="chatbox", ng-model="test")
+    
+    
+.row
+  .column.large-8.large-offset-2
+    .small-10.column
+      input#sendbox(type="text", ng-model="message")
+    .small-2.column
+      a.button.postfix(ng-click="send()") send
+      strong 

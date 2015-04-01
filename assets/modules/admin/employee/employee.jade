@@ -1,0 +1,32 @@
+md-content
+  h1 EMPLOYEE
+  hr
+md-content
+  table(style="width: 100%")
+    thead
+      tr
+        th #
+        th Email
+        th First Name
+        th Last Name
+        th Roles
+        th &nbsp
+    tbody
+      tr(ng-repeat="u in users track by $index")
+        td {{ $index + 1 }}
+        td {{ u.email }}
+        th {{ u.given_name }}
+        th {{ u.family_name }}
+        th {{ u.role }}
+        th 
+          a(ng-click="") 
+            .icon-edit
+    tfoot
+      tr
+        th
+          a.icon-left-bold
+        th &nbsp
+        th &nbsp
+        th &nbsp
+        th 
+          a.icon-right-bold

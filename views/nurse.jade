@@ -1,0 +1,40 @@
+doctype html
+html(ng-app="RegistrationApp")
+    head
+        title Nurse
+        base(href="//#{base}/")
+        meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+
+        // STYLES
+        
+        // STYLES END
+
+    body
+        // TEMPLATES
+        script(type="text/javascript", src="/templates/jst_nurse.js")
+        // TEMPLATES END
+        .main_cover
+          nav(ng-controller='NavigatorCtrl')
+            .nav-btn(ng-class="{active:url('/medicine')}")
+              a(href='/medicine')
+                .icon-pill
+            .nav-btn(ng-class="{active:url('/symptoms')}")
+              a(href='/symptoms')
+                .icon-suitcase
+            .nav-btn(ng-class="{active:url('/logs')}")
+              a(href='/logs')
+                .icon-clipboard
+            .nav-btn(ng-class="{active:url('/inquiries')}")
+              a(href='/inquiries')
+                .icon-talk-chat-2
+            .nav-btn(ng-class="{active:url('/settings')}")
+              a(href='/settings')
+                .icon-edit
+            #off.icon-power(ng-click='logout()')
+
+          section
+            .toggle(ng-view='ng-view')
+        // SCRIPTS
+        
+        // SCRIPTS END
+
