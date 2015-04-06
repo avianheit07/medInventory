@@ -33,9 +33,9 @@
 var users = {
   public:{
     css:[
-      'lib/angular-material/angular-material.min.css',
       'styles/dependencies/**/*.css',
-      'styles/admin/**/*.css'
+      'styles/admin/**/*.css',
+      'lib/angular-material/angular-material.min.css'
     ],
     js:[
       'lib/angular/angular.js',
